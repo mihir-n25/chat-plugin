@@ -3,9 +3,11 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
+        path: path.resolve(__dirname, 'dist'),  // This should be dist folder
         filename: 'chatbot-plugin.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
+        library: 'ChatBotPlugin',
+        libraryTarget: 'umd',  // Make sure it's usable as a plugin
+      },
     module: {
         rules: [
             {
