@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "routes": [
+      { 
+        "src": "/chatbot-plugin.js",
+        "headers": { "Cache-Control": "max-age=3600" },
+        "dest": "/chatbot-plugin.js"
+      },
+      { "handle": "filesystem" },
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
